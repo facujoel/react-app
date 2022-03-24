@@ -1,7 +1,7 @@
 import { NavBar } from "./components/NavBar/NavBar";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { CartWidget } from "./components/CartWidget/CartWidget";
-
+import { ItemCount } from "./components/ItemCount/ItemCount";
 
 
 
@@ -9,10 +9,9 @@ import { CartWidget } from "./components/CartWidget/CartWidget";
 function App() {
   return (
     < >
-      <NavBar>
-      
-      </NavBar>
+      <NavBar/>
       <ItemListContainer greeting= "Hola perro"/>
+      <ItemCount/>
     </>
   );
 }
