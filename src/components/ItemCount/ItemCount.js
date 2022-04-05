@@ -1,15 +1,11 @@
-import React from 'react';
-
-
+import { Button } from 'react-bootstrap';
 
 
 export const ItemCount = () => {
   return (
-    
-    <div className="btn-group" role="group" aria-label="Button group with nested dropdown">
-        <button type="button" className="btn btn-primary">+</button>
-        <button type="button" className="btn btn-primary">-</button>
-    </div>
-    
+    <>
+      <Button  variant="primary"> + </Button>
+      <Button variant="danger"> - </Button>
+    </>
   );
 }
