@@ -13,7 +13,7 @@ export const NavBar = () => {
         <Nav.Link href="#home">Incio</Nav.Link>
         <Nav.Link href="#link">Productos</Nav.Link>
         </Nav>
-        <Nav.Link className="me-auto"> 
+        <Nav.Link href="#carrito">
         <CartWidget href="#" className="me-auto"/>
         </Nav.Link>
     </Navbar.Collapse>

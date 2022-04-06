@@ -12,7 +12,7 @@ function App() {
     < >
       <NavBar/>
       <ItemListContainer greeting= "Hola perro"/>
-      <ItemCount/>
+      
       
     </>
   );

@@ -1,11 +1,11 @@
 import { Button } from 'react-bootstrap';
 
 
-export const ItemCount = () => {
+export const ItemCount = (text) => {
   return (
     <>
-      <Button  variant="primary"> + </Button>
-      <Button variant="danger"> - </Button>
+      <Button  variant="primary"> click me </Button>
+      
     </>
   );
 }
