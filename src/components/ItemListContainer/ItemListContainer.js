@@ -1,12 +1,14 @@
 import React from 'react'
+import { Counter } from '../Counter/Counter';
 import { ItemCount } from '../ItemCount/ItemCount';
 
 
 export const ItemListContainer = ( {greeting} ) => {
   return (
-  <div> 
+  <> 
     <h2> {greeting}</h2>
-    <ItemCount/> 
-  </div> 
+    <ItemCount >ir a algun lugar</ItemCount> 
+    <Counter></Counter>
+  </> 
   );
 }

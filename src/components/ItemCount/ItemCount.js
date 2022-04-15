@@ -1,10 +1,10 @@
 import { Button } from 'react-bootstrap';
 
 
-export const ItemCount = (text) => {
+export const ItemCount = ({children,click}) => {
   return (
     <>
-      <Button  variant="primary"> click me </Button>
+      <Button variant="primary" onClick={click}> {children} </Button>
       
     </>
   );
