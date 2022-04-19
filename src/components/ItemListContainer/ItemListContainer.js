@@ -1,31 +1,38 @@
-import React, { useEffect, useState } from 'react'
-import { Item } from '../Item/Item';
+import React, { useEffect, useState } from 'react';
+import { ItemList } from '../ItemList/ItemList';
 import pedirDatos from '../pedirDatos/pedirDatos';
 
 
 export const ItemListContainer = ( {} ) => {
   
   const [productos,setProductos] = useState ([])
+  const [loading, setLoading] = useState(false)
+
 
   useEffect(() => {
+    setLoading(true)
+
 
     pedirDatos()
       .then ((res) => {
         setProductos (res)
       })
       .catch((err) =>{
-        // console.log(err);
+         console.log(err);
       })
       .finally(()=>{
-        // console.log("Fin del proceso");
+        setLoading(false)
       })
 
   },[])
 
  
   return (
-  <div> 
-    {productos.map( (el)=> <Item nombre= {el.nombre} precio= {el.precio} img= {el.img} desc={el.desc} /> )}
-  </div> 
+  <>
+    {
+      loading ? <h2>Loading...</h2> : 
+      <ItemList productos= {productos}/>
+    }
+  </>
   )
 }
