@@ -1,14 +1,47 @@
-import React from 'react'
-import { Counter } from '../Counter/Counter';
-import { ItemCount } from '../ItemCount/ItemCount';
+import React, { useEffect, useState } from 'react'
+
+import { Item } from '../Item/Item';
 
 
-export const ItemListContainer = ( {greeting} ) => {
+import pedirDatos from '../pedirDatos/pedirDatos';
+
+
+
+
+
+
+export const ItemListContainer = ( {} ) => {
+  
+  const [productos,setProductos] = useState ([])
+
+
+
+
+
+  useEffect(() => {
+
+    pedirDatos()
+      .then ((res) => {
+        setProductos (res)
+      })
+      .catch((err) =>{
+        console.log(err);
+      })
+      .finally(()=>{
+        console.log("Fin del proceso");
+      })
+
+  },[])
+
+ 
+
   return (
-  <> 
-    <h2> {greeting}</h2>
-    <ItemCount >ir a algun lugar</ItemCount> 
-    <Counter></Counter>
-  </> 
-  );
+  <div> 
+    
+
+    {productos.map( (el)=> <Item nombre= {el.nombre} precio= {el.precio} img= {el.img} desc={el.desc} /> )}
+      
+
+  </div> 
+  )
 }

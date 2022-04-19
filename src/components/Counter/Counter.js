@@ -4,7 +4,7 @@ import { ItemCount } from '../ItemCount/ItemCount'
 
 export const Counter = () => {
 
-    let [clicks, setClicks] = useState(0)
+    const [clicks, setClicks] = useState(0)
 
     
     
