@@ -1,7 +1,7 @@
 
   
  const Stock = [
-    {
+    { 
       nombre: "producto 1",
       id:1,
       desc: "lorem ipsum product 1",

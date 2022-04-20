@@ -6,9 +6,9 @@ import { Card, Button } from "react-bootstrap"
 export const Item = ({nombre, precio, img, desc}) => {
   return (
       <>
-    <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={img} />
-  <Card.Body>
+    <Card className="m-3" style={{ width: '18rem' }}>
+  <Card.Img className="" variant="top" src={img} />
+  <Card.Body className="">
     <Card.Title>{nombre}</Card.Title>
     <Card.Text>
         {desc}   

@@ -5,9 +5,11 @@ export const ItemList = ({productos}) => {
  <>
     <h2>Productos</h2>
     <hr/>
-      <div className="row"> 
-    {productos.map( (el)=> <Item key={el.id} {...el} /> )}
-      </div> 
+    <div className="d-inline-flex p-2 "> 
+        
+          {productos.map( (el)=> <Item key={el.id} {...el} /> )}
+        
+    </div> 
 </>
   )
 }
