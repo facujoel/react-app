@@ -1,11 +1,11 @@
-import { Card, Button } from "react-bootstrap"
+import { Card, Button, Container } from "react-bootstrap"
 
 
 
 
 export const Item = ({nombre, precio, img, desc}) => {
   return (
-      <>
+      
     <Card className="m-3" style={{ width: '18rem' }}>
   <Card.Img className="" variant="top" src={img} />
   <Card.Body className="">
@@ -19,6 +19,6 @@ export const Item = ({nombre, precio, img, desc}) => {
     <Button variant="primary">Ver más</Button>
   </Card.Body>
 </Card>
-</>
+
   )
 }
