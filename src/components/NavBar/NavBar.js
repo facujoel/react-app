@@ -14,6 +14,7 @@ export const NavBar = () => {
         <Link className='m-3 width-25 btn-danger' to = "/">Incio</Link>
         <Link className='m-3 width-25 btn-danger' to = "productos">Productos</Link>
         <Link className='m-3 width-25 btn-danger' to = "nosotros">Nosotros</Link>
+        <Link className='m-3 width-25 btn-danger' to = "contacto">Contacto</Link>
         </Nav>
         <Nav.Link href="#carrito">
         <CartWidget href="#" className="me-auto"/>

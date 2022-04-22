@@ -10,6 +10,7 @@ import { Nosotros } from './components/Nosotros/Nosotros';
 
 
 import {Footer} from './components/Footer/Footer';
+import { Contacto } from './components/Productos/Contacto';
 
 
 
@@ -25,8 +26,9 @@ function App() {
 
       <Routes>
         <Route path='/' element= {<Inicio/>}/>
-        <Route path='/nosotros' element= {<Nosotros/>}/>
         <Route path='/productos' element= {<ItemListContainer/>}/>
+        <Route path='/nosotros' element= {<Nosotros/>}/>
+        <Route path='/contacto' element= {<Contacto/>}/>
         
         <Route path='*' element= {<Navigate to= '/' />}/>
 
