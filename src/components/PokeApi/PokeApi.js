@@ -8,19 +8,26 @@ export const PokeApi = ()=> {
 
 
     const [pokemon,setPokemon] = useState(null)
+    const [id, setId] = useState(1)
     
-    console.log(pokemon);
+    console.log(id);
 
+    const handleSiguiente = () => {
+        setId( id+1)
+    }
+    const handleAnterior = () => {
+       id > 1 && setId( id-1)
+    }
 
     useEffect(()=>{
         
-        fetch('https://pokeapi.co/api/v2/pokemon/1')
+        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
             .then((resp)=> resp.json() )
             .then((data)=> {
                  setPokemon(data)
             })
            
-    },[])
+    },[id])
 
 
 
@@ -39,6 +46,9 @@ export const PokeApi = ()=> {
             </div>
                 : <p> Cargando </p>
             }
+
+            <button onClick={handleAnterior} className="btn btn-outline-primary mx-3">Anterior</button>
+            <button onClick={handleSiguiente} className="btn btn-primary">Siguiente</button>
 
         </div>
     );
