@@ -7,7 +7,7 @@
       desc: "lorem ipsum product 1",
       precio: 1500,
       img: "https://via.placeholder.com/150",
-      stock:50,
+      stock:5,
       categoria:"nacionales"
       },
     {
@@ -16,7 +16,7 @@
       desc: "lorem ipsum product 2",
       precio: 1500,
       img: "https://via.placeholder.com/150",
-      stock:50,
+      stock:5,
       categoria:"nacionales"
       },
     {
@@ -25,7 +25,7 @@
       desc: "lorem ipsum product 3",
       precio: 1500,
       img: "https://via.placeholder.com/150",
-      stock:50,
+      stock:5,
       categoria:"nacionales"
       },
     {
@@ -34,7 +34,7 @@
       desc: "lorem ipsum product 4",
       precio: 1500,
       img: "https://via.placeholder.com/150",
-      stock:50,
+      stock:5,
       categoria:"importados"
       },
     {
@@ -43,7 +43,7 @@
       desc: "lorem ipsum product 5",
       precio: 1500,
       img: "https://via.placeholder.com/150",
-      stock:50,
+      stock:5,
       categoria:"bicicleta-scooters"
       },
       {
@@ -52,7 +52,7 @@
         desc: "lorem ipsum product 6",
         precio: 1500,
         img: "https://via.placeholder.com/150",
-        stock:50,
+        stock:5,
         categoria:"bicicleta-scooters"
         }
 
