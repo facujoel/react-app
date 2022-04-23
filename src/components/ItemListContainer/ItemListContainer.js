@@ -10,7 +10,7 @@ export const ItemListContainer = ( {} ) => {
   const [loading, setLoading] = useState(false)
 
   const {catId} = useParams()
-  console.log(catId);
+  
 
 
   useEffect( () => {
