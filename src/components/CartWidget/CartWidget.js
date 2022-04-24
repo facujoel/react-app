@@ -1,12 +1,16 @@
 
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../CartContext/CartContext";
 import "./CartWidget.css";
 
 
 
 export const CartWidget = () => {
+  const { cantidadCart, totalCart } = useContext(CartContext)
   return (
     
-    <div className="cart-widget ">
+    <Link to="/cart" className="cart-widget ">
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="23"
 
      fill="currentColor" className="bi bi-cart2 " viewBox="10 0 5 16">
@@ -19,7 +23,10 @@ export const CartWidget = () => {
 
 </svg>
     
-  </div>
+    <span> {cantidadCart()} </span>
+    <span> ${totalCart()} </span>
+
+  </Link>
     
   );
 }

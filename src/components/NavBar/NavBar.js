@@ -28,9 +28,9 @@ export const NavBar = () => {
          
         
          </Nav>
-        <Nav.Link href="#carrito">
-        <CartWidget href="#" className="me-auto"/>
-        </Nav.Link>
+        
+        <CartWidget className="me-auto"/>
+        
     </Navbar.Collapse>
   </Container>
       </Navbar>

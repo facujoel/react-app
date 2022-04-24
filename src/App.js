@@ -6,9 +6,9 @@ import { Inicio } from './components/Inicio/Inicio';
 
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-// import {Footer} from './components/Footer/Footer';
 import {CartContext} from './components/CartContext/CartContext';
 import { useState } from 'react';
+// import {Footer} from './components/Footer/Footer';
 
 
 
@@ -27,19 +27,27 @@ function App() {
     return cart.find((prod) => prod.id === id )
   }
 
+  const cantidadCart = ()=>{
+    return cart.reduce((acc, prod) => acc + prod.cantidad, 0)
+  }
 
-
+  const totalCart = () =>{
+    return cart.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+  }
 
   return (
 
     <CartContext.Provider value={{
       cart,
-      agregarAlCarrito
+      agregarAlCarrito,
+      isInCart,
+      cantidadCart,
+      totalCart,
     }} >
     
     <BrowserRouter>
 
-
+ 
       <NavBar/>
 
 
