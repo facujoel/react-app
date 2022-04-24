@@ -21,6 +21,14 @@ export const CartProvider = ({children}) => {
     const totalCart = () =>{
       return cart.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     }
+
+    const vaciarCart = () =>{
+        setCart([])
+    }
+
+    const eliminarItem = (id)=>{
+        setCart(cart.filter((prod)=> prod.id !==id))
+    }
     return(
         <CartContext.Provider value={{
 
@@ -29,6 +37,8 @@ export const CartProvider = ({children}) => {
         isInCart,
         cantidadCart,
         totalCart,
+        vaciarCart,
+        eliminarItem,
         }}>
 
         {children}

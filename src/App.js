@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Inicio } from './components/Inicio/Inicio';
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { Cart } from './components/Cart/Cart';
 import {CartProvider} from './components/CartContext/CartContext';
 
 // import {Footer} from './components/Footer/Footer';
@@ -27,7 +28,8 @@ function App() {
         <Route path='/productos/' element= {<ItemListContainer/>}/>
         <Route path='/productos/:catId' element= {<ItemListContainer/>}/>
         <Route path='/Nacionales/:catId' element= {<ItemListContainer/>}/>
-        <Route path='/roductos/:catId' element= {<ItemListContainer/>}/>
+        <Route path='/productos/:catId' element= {<ItemListContainer/>}/>
+        <Route path='/cart' element= {<Cart/>}/>
         <Route path='*' element= {<Navigate to= '/' />}/>
 
       </Routes>
