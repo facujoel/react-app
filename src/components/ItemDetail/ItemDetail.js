@@ -1,6 +1,7 @@
 import { ItemCount } from "../ItemCount/ItemCount"
 import {Button} from 'react-bootstrap'
-import {useState} from 'react'
+import { CartContext } from "../CartContext/CartContext"
+import {useContext, useState} from 'react'
 
 
 
@@ -10,7 +11,9 @@ export const ItemDetail = ({id,nombre,img,desc,precio,stock,categoria}) => {
 
   const [cantidad,setCantidad] = useState(0)
 
+  const {cart,agregarAlCarrito} = useContext(CartContext)
 
+  console.log(cart);
 
     const handleAgregar =() =>{
 
@@ -20,7 +23,7 @@ export const ItemDetail = ({id,nombre,img,desc,precio,stock,categoria}) => {
         id, nombre, precio,stock, cantidad
       }
 
-      console.log(addItem);
+      agregarAlCarrito(addItem);
     }
 
 
