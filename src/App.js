@@ -2,10 +2,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { NavBar } from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Inicio } from './components/Inicio/Inicio';
 
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-import {Footer} from './components/Footer/Footer';
+// import {Footer} from './components/Footer/Footer';
 import {CartContext} from './components/CartContext/CartContext';
 import { useState } from 'react';
 
@@ -44,10 +45,10 @@ function App() {
 
 
       <Routes>
-        <Route path='/' element= {<ItemListContainer/>}/>
+        
+        <Route path='/' element= {<Inicio/>}/>
         <Route path='/detail/:itemId' element= {<ItemDetailContainer/>}/>
-
-
+        <Route path='/productos/' element= {<ItemListContainer/>}/>
         <Route path='/productos/:catId' element= {<ItemListContainer/>}/>
         <Route path='/Nacionales/:catId' element= {<ItemListContainer/>}/>
         <Route path='/roductos/:catId' element= {<ItemListContainer/>}/>
@@ -61,7 +62,7 @@ function App() {
       </Routes>
 
       
-      <Footer/>
+      {/* <Footer/> */}
       
 
     </BrowserRouter>
