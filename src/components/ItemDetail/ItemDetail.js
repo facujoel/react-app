@@ -1,7 +1,8 @@
 import { ItemCount } from "../ItemCount/ItemCount"
 import {Button} from 'react-bootstrap'
 import { CartContext } from "../CartContext/CartContext"
-import {useContext, useState} from 'react'
+import {Fragment, useContext, useState} from 'react'
+import { Link } from "react-router-dom"
 
 
 
@@ -11,7 +12,7 @@ export const ItemDetail = ({id,nombre,img,desc,precio,stock,categoria}) => {
 
   const [cantidad,setCantidad] = useState(0)
 
-  const {cart,agregarAlCarrito} = useContext(CartContext)
+  const {cart,agregarAlCarrito, isInCart} = useContext(CartContext)
 
   console.log(cart);
 
@@ -19,12 +20,16 @@ export const ItemDetail = ({id,nombre,img,desc,precio,stock,categoria}) => {
 
       if (cantidad === 0) return
 
-      const addItem={
-        id, nombre, precio,stock, cantidad
+      if(!isInCart(id)){
+        const addItem={
+          id, nombre, precio,stock, cantidad
+        }
+  
+        agregarAlCarrito(addItem);
       }
 
-      agregarAlCarrito(addItem);
-    }
+      }
+
 
 
 
@@ -36,11 +41,20 @@ export const ItemDetail = ({id,nombre,img,desc,precio,stock,categoria}) => {
         <p> {desc} </p>
         <h5> Precio: $ {precio} </h5>
 
+        {
+          isInCart(id)
+          ?
+            <Link to= "/cart" className=" btn btn-success my-3">
+                Terminar mi compra
+            </Link>
+            : 
+        <Fragment>
         <ItemCount
           max={stock} 
           counter={cantidad}
           setCounter={setCantidad} />
-
+        
+        
         <hr/>
 
         <button className="btn btn-success" onClick={handleAgregar}
@@ -50,6 +64,12 @@ export const ItemDetail = ({id,nombre,img,desc,precio,stock,categoria}) => {
            Agregar al carrito
         
         </button>
+          
+          </Fragment>
+        }
+
+
+
     </div>
   )
 }

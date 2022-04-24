@@ -1,3 +1,4 @@
+import './navBar.css';
 import { Navbar,Container,Nav,Dropdown } from 'react-bootstrap';
 import { CartWidget } from '../CartWidget/CartWidget';
 import { Link } from 'react-router-dom';
@@ -5,15 +6,16 @@ import { Link } from 'react-router-dom';
 
 export const NavBar = () => {
   return (
-      <Navbar bg="danger" expand="lg">
+    <div id="nab">
+      <Navbar bg="success" expand="lg">
         <Container>
     <Link className=' h2 m-3 btn btn-outline-light' to ="/">Empresa S.A.</Link>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Link size="lg" className='m-1 btn-danger' to = "/">Incio</Link>
+        <Link size="lg" className='m-1 btn-success' to = "/">Incio</Link>
                     <Dropdown>
-              <Dropdown.Toggle className='mt' variant="danger " size="sm" id="dropdown-basic">
+              <Dropdown.Toggle className='mt' variant="success " size="sm" id="dropdown-basic">
                 Productos
               </Dropdown.Toggle>
 
@@ -26,11 +28,12 @@ export const NavBar = () => {
          
         
          </Nav>
-        <Nav.Link href="#carrito">
-        <CartWidget href="#" className="me-auto"/>
-        </Nav.Link>
+        
+        <CartWidget className="me-auto"/>
+        
     </Navbar.Collapse>
   </Container>
       </Navbar>
+      </div>
   );
 }
