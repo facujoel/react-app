@@ -57,7 +57,9 @@ export const ItemDetail = ({id,nombre,img,desc,precio,stock,categoria}) => {
         
         <hr/>
 
-        <button className="btn btn-success" onClick={handleAgregar}
+        <button className="btn btn-success" 
+        onClick={handleAgregar}
+        disabled={cantidad === 0}
         
         >
           
