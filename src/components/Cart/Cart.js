@@ -4,6 +4,7 @@ import {BsFillTrashFill} from 'react-icons/bs';
 import { Link } from "react-router-dom";
 
 
+
 export const Cart = ()=>{
 
     const {cart,totalCart,vaciarCart,eliminarItem} = useContext(CartContext)

@@ -7,10 +7,10 @@ import "./CartWidget.css";
 
 
 export const CartWidget = () => {
-  const { cantidadCart, totalCart } = useContext(CartContext)
+  const { cantidadCart, totalCart, cart } = useContext(CartContext)
   return (
     
-    <Link to="/cart" className="cart-widget ">
+    <Link to="/cart" className= {cart.length === 0 ? 'cart-widget cart-hidden' : 'cart-widget'}>
     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="23"
 
      fill="currentColor" className="bi bi-cart2 " viewBox="10 0 5 16">
