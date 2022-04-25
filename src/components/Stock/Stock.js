@@ -8,7 +8,8 @@
       precio: 1500,
       img: "https://via.placeholder.com/150",
       stock:5,
-      categoria:"nacionales"
+      categoria:"nacionales",
+      oferta: true
       },
     {
       nombre: "producto 2",
@@ -17,7 +18,8 @@
       precio: 1500,
       img: "https://via.placeholder.com/150",
       stock:5,
-      categoria:"nacionales"
+      categoria:"nacionales",
+      oferta: true
       },
     {
       nombre: "producto 3",
@@ -26,7 +28,8 @@
       precio: 1500,
       img: "https://via.placeholder.com/150",
       stock:5,
-      categoria:"nacionales"
+      categoria:"nacionales",
+      oferta: false
       },
     {
       nombre: "producto 4",
@@ -35,7 +38,8 @@
       precio: 1500,
       img: "https://via.placeholder.com/150",
       stock:5,
-      categoria:"importados"
+      categoria:"importados",
+      oferta: true
       },
     {
       nombre: "producto 5",
@@ -44,7 +48,8 @@
       precio: 1500,
       img: "https://via.placeholder.com/150",
       stock:5,
-      categoria:"bicicleta-scooters"
+      categoria:"bicicleta-scooters",
+      oferta: false
       },
       {
         nombre: "producto 6",
@@ -53,7 +58,8 @@
         precio: 1500,
         img: "https://via.placeholder.com/150",
         stock:5,
-        categoria:"bicicleta-scooters"
+        categoria:"bicicleta-scooters",
+        oferta: false
         }
 
  ]

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 
-export const Item = ({nombre, precio, img, desc,id}) => {
+export const Item = ({nombre, precio, img, desc,id,oferta}) => {
   return (
       
     <Card className="m-3" style={{ width: '18rem' }}>
@@ -14,6 +14,9 @@ export const Item = ({nombre, precio, img, desc,id}) => {
     <Card.Text>
         {desc}   
     </Card.Text>
+    {oferta &&
+      <Card.Title>EN OFERTA</Card.Title>
+    }
     <Card.Text>
         Precio: ${precio}
     </Card.Text>

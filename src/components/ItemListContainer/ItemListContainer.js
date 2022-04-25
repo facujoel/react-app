@@ -37,12 +37,9 @@ export const ItemListContainer = ( {} ) => {
   },[catId])
 
  
-  return (
-  <>
-    {
-      loading ? <h2>Loading...</h2> : 
-      <ItemList productos= {productos}/>
-    }
-  </>
-  )
+  if(loading){
+    return <h2>Loading</h2>
+  }
+  return <ItemList productos={productos}/>
+  
 }
