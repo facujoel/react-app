@@ -1,4 +1,4 @@
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { db } from '../firebase/FireBase';
@@ -20,7 +20,11 @@ export const ItemListContainer = ( {} ) => {
       
       const productosRef = collection(db, "productos")
 
-      getDocs(productosRef)
+      const q = catId ? query(productosRef, where("categoria", "==", catId )) : productosRef
+
+
+
+      getDocs(q)
       .then(resp => {
         const items = resp.docs.map((doc) => ({id: doc.id, ...doc.data()}))
         
