@@ -6,6 +6,7 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Cart } from './components/Cart/Cart';
 import {CartProvider} from './components/CartContext/CartContext';
+import { Checkout } from './components/Checkout/Checkout';
 
 // import {Footer} from './components/Footer/Footer';
 
@@ -31,7 +32,7 @@ function App() {
         <Route path='/productos/:catId' element= {<ItemListContainer/>}/>
         <Route path='/cart' element= {<Cart/>}/>
         <Route path='*' element= {<Navigate to= '/' />}/>
-
+        <Route path='/checkout' element= {<Checkout/>}/>
       </Routes>
       {/* <Footer/> */}
     </BrowserRouter>
