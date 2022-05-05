@@ -8,7 +8,7 @@ Mi e-commerce emula el sitio web de una concesionaria, la cual vende motos, adem
 Está hecho en su mayoría con react-bootstrap; para su data base usé firebase de google; 
 
 
-Aquí en [https://www.loom.com/share/61c46dab4b2c4acb9e119052d933d6d1](loom) podrás ver un pequeño video del funcionamiento del sitio.
+Aquí en [Loom](https://www.loom.com/share/61c46dab4b2c4acb9e119052d933d6d1) podrás ver un pequeño video del funcionamiento del sitio.
 
 
 # Getting Started with Create React App
