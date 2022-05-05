@@ -31,8 +31,8 @@ function App() {
         <Route path='/Nacionales/:catId' element= {<ItemListContainer/>}/>
         <Route path='/productos/:catId' element= {<ItemListContainer/>}/>
         <Route path='/cart' element= {<Cart/>}/>
-        <Route path='*' element= {<Navigate to= '/' />}/>
         <Route path='/checkout' element= {<Checkout/>}/>
+        <Route path='*' element= {<Navigate to= '/' />}/>
       </Routes>
       {/* <Footer/> */}
     </BrowserRouter>
